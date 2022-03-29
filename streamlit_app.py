@@ -27,7 +27,7 @@ elif slide == 2:
                 font-size:300px !important;
              }
              </style>
-             """, unsafe_allow_html=True
+             """, unsafe_allow_html=True)
 
                 
 if  rad == '1':
