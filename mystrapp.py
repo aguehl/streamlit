@@ -9,5 +9,5 @@ st.dataframe(df_cars)
 
 options = df_cars['continent'].unique().tolist()
 select = st.sidebar.multiselect('Which region do you want?',options)
-filtered_df = df_cars[df_cars['continent'].isin(Select)]
+filtered_df = df_cars[df_cars['continent'].isin(select)]
 st.write(filtered_df)
