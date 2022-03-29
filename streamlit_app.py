@@ -7,6 +7,6 @@ st.write("I enjoy to discover stremalit possibilities")
 link = "https://raw.githubusercontent.com/murpi/wilddata/master/quests/cars.csv"
 df_cars = pd.read_csv(link)
 
-st.write(df_weather)
+st.write(df_cars)
 
 
