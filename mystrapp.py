@@ -15,8 +15,8 @@ filtered_df = df_cars[df_cars['continent'].isin(select)]
 st.write(filtered_df)
 
 
-poids = df_cars['wheightlbs']
-temps = df_cars['time-to-60']
+poids = df_cars['wheightlbs'].tolist()
+temps = df_cars['time-to-60'].tolist()
 
 
 st.write(poids)
