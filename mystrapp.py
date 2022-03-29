@@ -15,8 +15,12 @@ filtered_df = df_cars[df_cars['continent'].isin(select)]
 st.write(filtered_df)
 
 
-poids = df_cars['wheightlbs'].tolist()
-temps = df_cars['time-to-60'].tolist()
+poids = df_cars['wheightlbs']
+temps = df_cars['time-to-60']
+
+
+st.write(poids)
+st.write(temps)
 
 #The plot
 fig = go.Figure(
@@ -27,8 +31,5 @@ fig = go.Figure(
     textinfo = "value"
 ))
 
-st.header("Pie chart")
+st.header("Time to 60mph by the wheight ")
 st.plotly_chart(fig)
-
-st.write(poids)
-st.write(temps)
