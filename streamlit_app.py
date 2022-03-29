@@ -3,12 +3,13 @@ import pandas as pd
 
 rad = st.radio('Title',('1','2'))
 slide = st.slider('Taille du titre', 1, 3, 1)
+st.balloons()
 
 if slide == 1:
   st.markdown("""
              <style>
              .big-font {
-                font-size:100px !important;
+                font-size:50px !important;
              }
              </style>
              """, unsafe_allow_html=True)
@@ -16,7 +17,7 @@ elif slide == 2:
     st.markdown("""
              <style>
              .big-font {
-                font-size:200px !important;
+                font-size:100px !important;
              }
              </style>
              """, unsafe_allow_html=True)
@@ -24,7 +25,7 @@ elif slide == 3:
     st.markdown("""
              <style>
              .big-font {
-                font-size:300px !important;
+                font-size:150px !important;
              }
              </style>
              """, unsafe_allow_html=True)
