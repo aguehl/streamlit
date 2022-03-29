@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-rad = st.radio('Title','1','2')
+rad = st.radio('Title',('1','2'))
 
 if  rad == '1':
   st.title('Hello Wilders 1')
