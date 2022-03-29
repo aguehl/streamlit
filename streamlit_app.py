@@ -31,9 +31,9 @@ elif slide == 2:
 
                 
 if  rad == '1':
-  st.markdown(''<p class="big-font">Hello Wilder 1 !!</p>', unsafe_allow_html=True )
+  st.markdown('<p class="big-font">Hello Wilder 1 !!</p>', unsafe_allow_html=True )
 if  rad == '2':
-  st.markdown(''<p class="big-font">Hello Wilder 2 !!</p>', unsafe_allow_html=True )
+  st.markdown('<p class="big-font">Hello Wilder 2 !!</p>', unsafe_allow_html=True )
 
 
 
