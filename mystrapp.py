@@ -12,3 +12,5 @@ select = st.sidebar.multiselect('Which region do you want?',options, default= op
 filtered_df = df_cars[df_cars['continent'].isin(select)]
 st.write(filtered_df)
 
+chart_df = df_cars[df_cars['wheightlbs'], df_cars['time-to-60']
+st.line_chart(chart_df)
