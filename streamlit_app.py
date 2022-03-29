@@ -20,7 +20,7 @@ elif slide == 2:
              }
              </style>
              """, unsafe_allow_html=True)
-elif slide == 2:
+elif slide == 3:
     st.markdown("""
              <style>
              .big-font {
