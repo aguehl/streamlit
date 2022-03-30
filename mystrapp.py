@@ -41,7 +41,7 @@ fig = px.scatter(df_cars, y='time-to-60', x='hp', trendline="ols",  color="time-
                   'hp':'Horse Power'},
                 title='Correlation entre la puissance et le temps pour arriver à 60mph')
 
-fig.update_layout(title_font_size=19)
+fig.update_layout(title_font_size=26)
 
 st.plotly_chart(fig, use_container_width=True)
 st.subheader(f'Coef de correlation {Cor}')
