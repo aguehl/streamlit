@@ -4,3 +4,4 @@ pandas
 streamlit
 click==8.0.4
 plotly
+statsmodels
