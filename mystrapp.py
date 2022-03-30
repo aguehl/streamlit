@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 import plotly.express as px
 import statsmodels
 import seaborn as sns
@@ -43,5 +44,4 @@ fig = px.scatter(df_cars, y='time-to-60', x='hp', trendline="ols",  color="time-
 st.plotly_chart(fig, use_container_width=True)
 st.subheader('Coef de correlation", Cor)
 
-import seaborn as sns
 
