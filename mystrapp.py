@@ -38,7 +38,8 @@ fig = px.scatter(df_cars, y='time-to-60', x='hp', trendline="ols",  color="time-
                 labels={
                   'time-to-60':'Temps de 0 à 60mph',
                   'hp':'Horse Power'},
-                title='Correlation entre la puissance et le temps pour arriver à 60mph')
+                title='Correlation entre la puissance et le temps pour arriver à 60mph',
+		font=dict(size=16))
 
 
 st.plotly_chart(fig, use_container_width=True)
