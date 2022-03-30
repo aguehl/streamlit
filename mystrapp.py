@@ -17,8 +17,8 @@ filtered_df = df_cars[df_cars['continent'].isin(select)]
 st.write(filtered_df)
 
 
-horse_power = df_cars['hp']
-temps = df_cars['time-to-60']
+# horse_power = df_cars['hp']
+# temps = df_cars['time-to-60']
 
 fig = px.scatter(df_cars, y='time-to-60', x='hp', trendline="ols")
 
