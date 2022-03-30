@@ -42,6 +42,6 @@ fig = px.scatter(df_cars, y='time-to-60', x='hp', trendline="ols",  color="time-
 
 
 st.plotly_chart(fig, use_container_width=True)
-st.subheader('Coef de correlation", Cor)
+st.subheader('Coef de correlation', Cor)
 
 
