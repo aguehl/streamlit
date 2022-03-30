@@ -33,7 +33,7 @@ temps = df_cars['time-to-60']
 
 Cor=round(np.corrcoef(horse_power,temps)[0,1], 2)
 
-fig['layout']['title']['font'] = dict(size=14)
+
 	 
 fig = px.scatter(df_cars, y='time-to-60', x='hp', trendline="ols",  color="time-to-60", color_continuous_scale="turbo",
                 labels={
@@ -42,6 +42,7 @@ fig = px.scatter(df_cars, y='time-to-60', x='hp', trendline="ols",  color="time-
                 title='Correlation entre la puissance et le temps pour arriver à 60mph',
 		title_x=0.5)
 
+fig.update_layout(title_font_size=19)
 
 st.plotly_chart(fig, use_container_width=True)
 st.subheader(f'Coef de correlation {Cor}')
