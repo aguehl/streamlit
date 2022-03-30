@@ -20,7 +20,7 @@ st.write(filtered_df)
 horse_power = df_cars['hp']
 temps = df_cars['time-to-60']
 
-fig = px.scatter(y=temps, x=horse_power, trendline="ols")
+fig = px.scatter(df_cars, y='time-to-60', x='hp', trendline="ols")
 
 
 st.plotly_chart(fig, use_container_width=True)
