@@ -16,7 +16,7 @@ filtered_df = df_cars[df_cars['continent'].isin(select)]
 st.write(filtered_df)
 
 
-poids = df_cars['weightlbs']
+HP = df_cars['horse_power']
 temps = df_cars['time-to-60']
 
 fig = px.scatter(poids, temps)
