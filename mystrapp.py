@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import statsmodels
+import seaborn as sns
 
 
 st.title("Hello  Wilder")
@@ -9,12 +10,17 @@ st.title("Hello  Wilder")
 link = 'https://raw.githubusercontent.com/murpi/wilddata/master/quests/cars.csv'
 df_cars = pd.read_csv(link)
 
-st.write(df_cars)
 
 options = df_cars['continent'].unique().tolist()
 select = st.sidebar.multiselect('Which region do you want?',options, default= options)
 filtered_df = df_cars[df_cars['continent'].isin(select)]
 st.write(filtered_df)
+
+viz_correlation = sns.heatmap(df_cars.corr(), 
+								center=0,
+								cmap = sns.color_palette("vlag", as_cmap=True)
+								)
+st.pyplot(viz_correlation.figure)
 
 st.balloons()
 
@@ -30,4 +36,6 @@ fig = px.scatter(df_cars, y='time-to-60', x='hp', trendline="ols",  color="time-
 
 
 st.plotly_chart(fig, use_container_width=True)
+
+import seaborn as sns
 
