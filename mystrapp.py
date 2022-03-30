@@ -31,7 +31,7 @@ st.balloons()
 horse_power = df_cars['hp']
 temps = df_cars['time-to-60']
 
-Cor= np.corrcoef(horse_power,temps)
+Cor=round(np.corrcoef(horse_power,temps), 4)
 
 	 
 fig = px.scatter(df_cars, y='time-to-60', x='hp', trendline="ols",  color="time-to-60", color_continuous_scale="turbo",
