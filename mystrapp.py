@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import plotly
+
 
 st.title("Hello  Wilder")
 
@@ -20,8 +20,7 @@ poids = df_cars['weightlbs']
 temps = df_cars['time-to-60']
 
 fig = px.scatter(poids, temps)
-fig.show()
+#fig.show()
 
-
-# st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, use_container_width=True)
 
