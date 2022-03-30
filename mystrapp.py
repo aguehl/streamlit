@@ -21,7 +21,7 @@ viz_correlation = sns.heatmap(df_cars.corr(),
 			annot= True,
 			cmap = sns.color_palette("vlag", as_cmap=True)
 			)
-st.title('Correlation entre les éléments'
+st.title('Correlation entre les éléments')
 st.pyplot(viz_correlation.figure)
 
 st.balloons()
