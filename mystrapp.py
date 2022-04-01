@@ -13,7 +13,7 @@ df_cars = pd.read_csv(link)
 
 
 options = df_cars['continent'].unique().tolist()
-select = st.sidebar.multiselect('Which region do you want?',options, default= options)
+select = st.multiselect('Which region do you want?',options, default= options)
 filtered_df = df_cars[df_cars['continent'].isin(select)]
 st.write(filtered_df)
 
@@ -27,24 +27,26 @@ st.pyplot(viz_correlation.figure)
 
 st.balloons()
 
-cols = st.multiselect('select columns:', df_cars.columns, default=[])
-
-horse_power = df_cars['hp']
-temps = df_cars['time-to-60']
-
-Cor=round(np.corrcoef(horse_power,temps)[0,1], 2)
+optionY = df_cars.columns
+optionX = df_cars.columns
 
 
-	 
-fig = px.scatter(df_cars, y='time-to-60', x='hp', trendline="ols",  color="time-to-60", color_continuous_scale="turbo",
+Ycol = st.selectbox('Choisir des données à visualiser:', optionY)
+Xcol = st.selectbox('', optionX)
+
+XArray= np.array(df_cars[Xcol])
+YArray= np.array(df_cars[Ycol])
+
+
+Cor=round(np.corrcoef(XArray,YArray)[0,1], 2)
+ 
+fig = px.scatter(df_cars, y=Ycol, x=Xcol, trendline="ols",  color=Ycol, color_continuous_scale="turbo",
                 labels={
-                  'time-to-60':'Temps de 0 à 60mph',
-                  'hp':'Horse Power'},
-                title='Correlation entre la puissance et le temps pour arriver à 60mph')
+                  Ycol:Ycol,
+                  Xcol:Xcol},
+                title=f'Correlation entre {Xcol} et {Ycol}')
 
 fig.update_layout(title_font_size=26)
 
 st.plotly_chart(fig, use_container_width=True)
 st.subheader(f'Coef de correlation {Cor}')
-
-
