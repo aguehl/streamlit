@@ -27,7 +27,7 @@ st.pyplot(viz_correlation.figure)
 
 st.balloons()
 
-cols = st.multiselect('select columns:', df.columns, default=[])
+cols = st.multiselect('select columns:', df_cars.columns, default=[])
 
 horse_power = df_cars['hp']
 temps = df_cars['time-to-60']
